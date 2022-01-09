@@ -1,0 +1,14 @@
+{
+  "description": "Bare minimum to provide a PWA  (c) 2021 Scot Watson  All Rights Reserved",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Test Web App",
+  "short_name": "PWA",
+  "start_url": "/index.html"
+}
