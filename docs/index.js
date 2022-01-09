@@ -32,6 +32,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   // Stash the event so it can be triggered later.
   // Update UI to notify the user they can add to home screen
+  console.log("beforeinstallprompt event fired");
   e.preventDefault();
   deferredPrompt = e;
   addBtn.style.display = "block";
