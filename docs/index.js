@@ -9,7 +9,7 @@ function projectFile(filename) {
 
 function notify() {
   if (document.body.style.backgroundColor === "rgb(64, 64, 64)") {
-    document.body.style.backgroundColor = "rgb(196, 196, 196)";
+    document.body.style.backgroundColor = "rgb(255, 64, 196)";
   } else {
     document.body.style.backgroundColor = "rgb(64, 64, 64)";
   }
