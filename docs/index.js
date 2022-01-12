@@ -3,8 +3,11 @@
 
 alert("Start");
 
+// NOTE: This path is hardcoded, window.location not reliable
+const pathname = "/hello-world/";
+
 function projectFile(filename) {
-  return window.location.pathname + filename;
+  return pathname + filename;
 }
 
 function notify() {
