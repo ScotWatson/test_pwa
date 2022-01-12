@@ -20,7 +20,7 @@ function notify() {
 setInterval(notify, 2000);
 
 // Register service worker to control making site work offline
-
+/*
 if ("serviceWorker" in navigator) {
   console.log("index.js: Start Registering");
   navigator.serviceWorker
@@ -28,7 +28,7 @@ if ("serviceWorker" in navigator) {
     .then(() => { console.log("Service Worker Registered"); });
   console.log("index.js: End Registering");
 }
-
+*/
 // Code to handle install prompt on desktop
 
 let deferredPrompt;
