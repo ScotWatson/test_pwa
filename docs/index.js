@@ -22,9 +22,11 @@ setInterval(notify, 2000);
 // Register service worker to control making site work offline
 
 if ("serviceWorker" in navigator) {
+  console.log("index.js: Start Registering");
   navigator.serviceWorker
     .register(projectFile("sw.js"))
-    .then(() => { alert("Service Worker Registered"); });
+    .then(() => { console.log("Service Worker Registered"); });
+  console.log("index.js: End Registering");
 }
 
 // Code to handle install prompt on desktop
@@ -37,7 +39,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   // Stash the event so it can be triggered later.
   // Update UI to notify the user they can add to home screen
-  console.log("beforeinstallprompt event fired");
+  console.log("index.js: beforeinstallprompt event fired");
   e.preventDefault();
   deferredPrompt = e;
   addBtn.style.display = "block";
