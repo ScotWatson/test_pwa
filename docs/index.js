@@ -24,7 +24,7 @@ setInterval(notify, 2000);
 if ("serviceWorker" in navigator) {
   console.log("index.js: Start Registering");
   navigator.serviceWorker
-    .register(projectFile("sw.js"))
+    .register("sw.js")
     .then(() => { console.log("Service Worker Registered"); });
   console.log("index.js: End Registering");
 }
