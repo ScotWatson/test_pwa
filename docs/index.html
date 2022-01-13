@@ -10,12 +10,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <title>Test Web App</title>
     <link href="style.css" rel="stylesheet">
     <script src="index.js" defer></script>
-<!--    <link rel="manifest" href="manifest.webmanifest">  -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <p>Last Updated: 2022-01-12 10:13 PM</p>
+    <p>Last Updated: 2022-01-12 10:20 PM</p>
     <button class="add-button">Add to home screen</button>
     <h1>Introduction</h1>
     <p>This is a test.</p>
@@ -33,12 +33,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       webManifest.short_name = "PWA";
       webManifest.start_url = "/test_pwa/index.html";
       let strWebManifest = JSON.stringify(webManifest);
+      console.log(strWebManifest);
       let blobWebManifest = new Blob( [ strWebManifest ] );
       let linkWebManifest = document.createElement("link");
       let urlWebManifest = URL.createObjectURL(blobWebManifest);
       linkWebManifest.setAttribute("rel", "manifest");
       linkWebManifest.setAttribute("href", urlWebManifest);
-      document.head.appendChild(linkWebManifest);
+//      document.head.appendChild(linkWebManifest);
     </script>
   </body>
 </html>
