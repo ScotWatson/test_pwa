@@ -10,5 +10,5 @@
   ],
   "name": "Test Web App",
   "short_name": "PWA",
-  "start_url": "/hello-world/index.html"
+  "start_url": "/test_pwa/index.html"
 }
