@@ -1,0 +1,2 @@
+Hello, I am here to test the ability to fetch files from a server.
+If the fetch is successful, this text will be displayed in a textarea on the main page.
