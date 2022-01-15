@@ -3,6 +3,20 @@
 
 alert("Start");
 
+let promiseRequest = fetch("/test.txt");
+promiseRequest.then(parse);
+promiseRequest.catch(handle);
+
+function parse(response) {
+  let textarea = document.createElement("textarea");
+  textarea.value = response.body;
+  alert("Fetch success");
+}
+function handle(error) {
+  console.log(error);
+  alert("Fetch error");
+}
+
 // NOTE: This path is hardcoded, window.location not reliable
 const pathname = "/hello-world/";
 
