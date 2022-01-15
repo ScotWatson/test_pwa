@@ -12,6 +12,7 @@ function parse(response) {
   let reader = response.body.getReader();
   reader.read().then(process);
   function process(result) {
+    console.log(result);
     textarea.value = result.value;
     textarea.width = 80;
     document.body.appendChild(textarea);
