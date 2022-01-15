@@ -10,7 +10,7 @@ promiseRequest.catch(handle);
 function parse(response) {
   let textarea = document.createElement("textarea");
   let reader = response.body.getReader();
-  reader.read().then();
+  reader.read().then(process);
   function process(result) {
     textarea.value = result.value;
     textarea.width = 80;
