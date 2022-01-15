@@ -9,9 +9,14 @@ promiseRequest.catch(handle);
 
 function parse(response) {
   let textarea = document.createElement("textarea");
-  textarea.value = response.body;
-  document.body.appendChild(textarea);
-  alert("Fetch success");
+  let reader = response.body.getReader();
+  reader.read().then();
+  function process(result) {
+    textarea.value = result.value;
+    textarea.width = 80;
+    document.body.appendChild(textarea);
+    alert("Fetch success");
+  }
 }
 function handle(error) {
   console.log(error);
