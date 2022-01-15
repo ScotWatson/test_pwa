@@ -10,6 +10,7 @@ promiseRequest.catch(handle);
 function parse(response) {
   let textarea = document.createElement("textarea");
   textarea.value = response.body;
+  document.body.appendChild(textarea);
   alert("Fetch success");
 }
 function handle(error) {
