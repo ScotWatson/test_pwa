@@ -4,11 +4,12 @@
 // NOTE: This path is hardcoded, window.location not reliable
 const pathname = "/test_pwa/";
 
-let promiseRequest = fetch(pathname + "test.txt");
+let promiseRequest = fetch("https://drive.google.com/uc?id=1GbGcyVXnfzlbTH8Qwz49VjbGQwtfdUuP");
 promiseRequest.then(parse);
 promiseRequest.catch(handle);
 
 function parse(response) {
+  console.log(response);
   let textarea = document.createElement("textarea");
   let reader = response.body.getReader();
   reader.read().then(process);
